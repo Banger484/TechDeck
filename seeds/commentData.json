@@ -1,0 +1,12 @@
+[
+    {
+        "comment": "This was the worst post I have ever seen...",
+        "user_id": 2,
+        "post_id": 1
+    },
+    {
+        "comment": "It can't be that bad!?",
+        "user_id": 1,
+        "post_id": 1
+    }
+]

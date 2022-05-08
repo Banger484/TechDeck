@@ -1,0 +1,23 @@
+:root {
+    --red: #D00000;
+    --yellow: #FFBA08;
+    --blue: #3F88C5;
+    --dark-blue: #032B43;
+    --green: #136F63;
+    --space: #2B2D42;
+    --light-space: #8D99AE;
+    --lightest: #EDF2F4;
+}
+*{
+    color: var(--blue);
+}
+body {
+    min-height: 100%;
+    background-color: var(--space);
+}
+header {
+    background-color: var(--light-space);
+}
+header h1 {
+    color: var(--dark-blue);
+}

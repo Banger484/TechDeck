@@ -5,8 +5,6 @@ const ehb = require('express-handlebars')
 const routes = require('./controllers')
 const session = require('express-session')
 const sequelize = require('./config/connection')
-const exp = require('constants')
-const { Server } = require('http')
 const sequelizeStore = require('connect-session-sequelize')(session.Store)
 const PORT = process.env.PORT || 3000
 

@@ -1,23 +1,40 @@
 :root {
-    --red: #D00000;
-    --yellow: #FFBA08;
-    --blue: #3F88C5;
-    --dark-blue: #032B43;
-    --green: #136F63;
-    --space: #2B2D42;
-    --light-space: #8D99AE;
-    --lightest: #EDF2F4;
+  --red: #d00000;
+  --yellow: #ffba08;
+  --blue: #3f88c5;
+  --dark-blue: #032b43;
+  --green: #136f63;
+  --space: #2b2d42;
+  --light-space: #8d99ae;
+  --lightest: #edf2f4;
 }
-*{
-    color: var(--blue);
+* {
+  color: var(--blue);
 }
 body {
-    min-height: 100%;
-    background-color: var(--space);
+  min-height: 100%;
+  background-color: var(--space);
 }
 header {
-    background-color: var(--light-space);
+  background-color: var(--light-space);
 }
 header h1 {
-    color: var(--dark-blue);
+  color: var(--dark-blue);
+}
+
+.user-form-card {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+}
+.user-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.user-form input {
+  width: 25vw;
+}
+.login-button {
+  width: 25vw;
 }

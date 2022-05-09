@@ -1,12 +1,14 @@
+const router = require('express').Router()
 const { Post, User, Comment } = require('../../models')
 
-const router = require('express').Router()
 
 router.get('/', async (req, res) => {
-
+    if(!req.session) {
+       console.log('you must log in.');
+    }
     const postData = await Post.findAll({
         where: {
-            id: req.session.user_id
+            user_id: 1
         },
         include: [
             {
@@ -24,7 +26,7 @@ router.get('/', async (req, res) => {
     try {
         
         res.render('dashboard', {
-            posts,
+            posts
         })
     } catch (err) {
         res.json(err)

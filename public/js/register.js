@@ -4,7 +4,6 @@ const registerFormHandler = async (event) => {
   const username = document.querySelector("#username-register").value.trim();
   const password = document.querySelector("#password-register").value.trim();
   const confirmPassword = document.querySelector("#confirm-register").value.trim()
-  console.log(username);
 
   if (username && password && password === confirmPassword) {
     const response = await fetch("/api/user/register", {

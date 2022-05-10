@@ -2,8 +2,9 @@ const assist = document.getElementById("post-title");
 
 const postId = assist.dataset.post;
 
-const addNewComment = async () => {
-  event.preventDefault();
+const addNewComment = async (event) => {
+  event.preventDefault()
+  
   const comment = document.querySelector("#comment-content-input").value.trim();
   if (comment == "") {
     return alert("You must enter content for your new comment!");

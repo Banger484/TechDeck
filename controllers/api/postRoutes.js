@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { User, Post, Comment } = require("../../models");
+const withAuth = require('../../utils/auth')
 
-router.get("/:id", async (req, res) => {
+router.get("/:id", withAuth, async (req, res) => {
   const postData = await Post.findAll({
     where: {
       id: req.params.id,
@@ -39,7 +40,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/:id", async (req, res) => {
+router.post("/:id", withAuth, async (req, res) => {
   const newComment = await Comment.create({
     comment: req.body.comment,
     post_id: req.params.id,

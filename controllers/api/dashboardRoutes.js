@@ -32,11 +32,11 @@ router.get("/", withAuth, async (req, res) => {
   }
 });
 
-router.get("/add", async (req, res) => {
+router.get("/add", withAuth, async (req, res) => {
   res.render("addpost");
 });
 
-router.post("/add", async (req, res) => {
+router.post("/add", withAuth, async (req, res) => {
   try {
     const newPost = await Post.create({
       title: req.body.title,
